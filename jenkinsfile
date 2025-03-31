@@ -1,0 +1,18 @@
+pipeline{
+    agent any
+    tools{
+        gradle "gradle"
+}
+    stages{
+        stage("cloning repository"){
+        steps{
+            git branch:"master",url:"https://github.com/hmikenye/gallery.git"
+        }
+    }
+      stage("building code"){
+        steps{
+            sh "gradle build"
+}
+}
+}
+}
