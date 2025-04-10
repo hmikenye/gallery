@@ -41,8 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json())
 
 
-app.use('/', index);
-app.use('/image', image);
+app.use('/', require('./routes/index'));
+app.use('/image', require('./routes/image'));
 
 
 
