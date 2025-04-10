@@ -1,6 +1,5 @@
 const chai = require('chai');
  const chaiHttp = require('chai-http');
- const app = require('../server'); // ✅ this now only contains the app
  const app = require('../server'); // this should be the exported express app
  const expect = chai.expect;
  
